@@ -1,10 +1,12 @@
+import Title from "./components/title";
+import Rating from "./components/rating";
 export type MovieProps = {
     id :number;
     rating : number;
     picture: string;
     title: string;
 }
-const Movie = ({id , rating, picture , title} : MovieProps ) =>{
+const Movie = ({id , rating,  picture , title} : MovieProps ) =>{
     return 
     <div className="movie">
         <div className="movie-footer">
@@ -15,8 +17,11 @@ const Movie = ({id , rating, picture , title} : MovieProps ) =>{
                         </svg>
                 
                 </button>
+                <Title>{title}</Title>
+
 
             </div>
+            <Rating rate={rating}/>
 
         </div>
 

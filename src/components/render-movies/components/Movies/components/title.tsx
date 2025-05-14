@@ -1,8 +1,9 @@
-const Title = () => {
-    return
-    <div>
-        <h2></h2>
-    </div>
-
+export type TitleProps = {
+    children : React.ReactNode;
 }
-export default Title
+
+const Title = ({children} : TitleProps) => {
+    return <h2>{children}</h2>;
+};
+
+export default Title;
